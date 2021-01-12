@@ -1,10 +1,15 @@
 let num = 9
+let start = true
 basic.forever(function on_forever() {
     
-    if (input.buttonIsPressed(Button.A)) {
-        basic.showNumber(num)
-        basic.pause(350)
-        basic.showNumber(num - 1)
+    while (start == true) {
+        if (num != -1) {
+            basic.showNumber(num)
+            basic.pause(350)
+            num -= 1
+        } else {
+            break
+        }
+        
     }
-    
 })
